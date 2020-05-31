@@ -1,0 +1,1926 @@
+@CHARSET "UTF-8";
+/*******************************cat.css**********************************/
+body{
+   font-size:12px;
+   font-family:Arial;
+}
+a{
+    color:#999;
+}
+a:hover{
+    text-decoration:none;
+    color:#C40000;
+}
+/* div{ */
+/* 	border:1px solid #ffff00; */
+/* } */
+/*导航栏*/
+.redColor{
+    color: #C40000 !important;/* 将所有的图标变红 */
+}
+nav.top{
+    background-color: #f2f2f2;/* 设置导航栏的背景色，其内容和上下部的边距，下边界 */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom:1px solid  #e7e7e7;
+}
+nav.top div.topDiv{
+	max-width:1013px;
+	margin:0px auto;
+}
+nav.top span, nav.top a{/* 设置导航栏其一级内容的颜色，外边距 */
+    color: #999;
+    margin: 0px 10px 0px 10px;
+}
+nav.top a:hover{/* 设置导航栏的连接，当鼠标触碰时的颜色，并去掉下划线 */
+	color: #C40000;
+    text-decoration: none;
+}
+/*搜索栏*/
+div.searchDiv{
+    background-color: #C40000;
+    width: 350px;
+    margin: 50px auto;
+    padding: 1px;
+    height: 40px;
+    display: block;
+}
+div.searchDiv input{
+	width: 240px;
+	height: 37px;
+	border:1px solid transparent;
+	margin:1px;/*外边距*/
+	outline:none;
+}
+div.searchDiv button{
+	border:1px solid transparent;
+	background-color:transparent;
+	font-size:18px;
+	font-weight:bold;
+	color:white;
+	width:100px;	
+}
+div.searchBelow{
+	margin-top: 3px;
+    margin-left: -3px;
+}
+div.searchBelow a{
+	padding:0px 20px 0px 20px;/*左右间隔20px*/
+}
+div.search img.logo{
+    position: absolute;
+    left: 160px;
+    top: 40px;
+    width:230px;
+    z-index:-1;
+}
+/*简单搜索栏*/
+div.simpleSear{
+	max-width:990px;
+	margin:0px auto;
+}
+div.simpleSearDiv{
+	background-color: #C40000;
+    width: 300px;
+    margin: 0px auto;
+    padding: 1px;
+    height: 40px;
+    display: inline-block;
+    margin-bottom:50px;
+/*     border:1px solid #00ffff; */
+}
+div.simpleSearDiv input{
+	width: 70%;
+	height: 36px;
+	border:1px solid transparent;
+	margin:1px;/*外边距*/
+	outline:none;
+}
+div.simpleSearDiv button{
+	border:1px solid transparent;
+	background-color:transparent;
+	font-size:16px;
+	font-weight:bold;
+	color:white;
+	width:80px;	
+}
+div.simpleSearBelow{
+	margin-top: 3px;
+    margin-left: -3px;
+}
+div.simpleSearBelow a{
+	padding:0px 10px 0px 10px;/*左右间隔10px*/
+	font-size:14px;
+}
+div.simpleSear img{
+	margin-top: 15px;
+	margin-left:10px;
+	width:150px;
+}
+/*页脚*/
+div.footer{
+	position: relative; /*or前面的是absolute就可以用*/  
+    margin: 0px 0px;
+/*     border:1px solid  #ff0000; */
+    width: 100%;/*横向填充,包括子元素*/
+}
+div.footerEnsure{
+	border-top:1px solid  #e7e7e7;
+   	border-bottom:1px solid  #e7e7e7;
+	text-align:center;/*内容居中*/
+	padding: 10px;
+}
+div.footDesc{
+/* 	border:1px solid  #ff0000; */
+}
+div.footDesc_col{
+/* 	border:1px solid  #00ffff; */
+	float:left;/*块间float，实现块间水平排列*/
+	margin-top:30px;
+	margin-left:150px;
+}
+span.footDesc_colTitle{
+	font-size:16px;
+    font-family:微软雅黑;
+    font-weight:bold;
+    color:#54514e;
+}
+img.cat{
+	margin-left:150px;
+}
+div.moreInfo{
+	border-top:1px solid  #c40000;
+	background-color:#1d1d1d;
+	height:190px;	
+}
+div.white_link{
+	margin:10px 150px 10px 150px;
+}
+div.white_link a,div.white_link span{
+	color:#ffffff;
+}
+div.license{
+	margin:10px 150px 10px 150px;/*子块也适用*/
+	color:#b0b0b0;
+}
+div.copyRightYear{
+	color:#808080;
+	margin:10px 0px 10px 0px;
+}
+/*******************************cat1.css**********************************/
+/*猫耳朵*/
+img.catear{
+	position: absolute;
+	height: 15px;
+	display: none;/*绝对位置*/
+}
+/*导航栏*/
+div.categoryWithCarousel{
+	width: 100%;
+ 	position:relative;
+}
+div.headbar{
+	background-color: #DD2727;
+}
+div.head{
+	width: 160px;
+	background-color: #980707;
+	height: 36px;
+	line-height: 36px;/*调整内部与文字的上下距离*/
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	margin-left: 125px;
+	display: inline-block;
+}
+div.menu{
+	display: inline-block;
+}
+div.menu img{
+	height:32px;/*缩短图片*/
+	padding-bottom:1px;
+}
+div.menu a{
+	color:#ffffff;
+	font-size:15px;
+	text-decoration:none;
+}
+div.menu span{
+	margin-left:40px;
+}
+/*轮播*/
+div.carousel-of-product{
+	height: 510px;
+	width:1013px;
+	margin:0px auto;
+}
+img.carouselImage{
+	height: 510px !important;
+}
+/*轮播背景*/
+div.carouselBackgroundDiv{
+	width:100%;
+	height:510px;
+	background-color:#E8E8E8;
+	position:absolute;
+	top:36px;
+	z-index:-1;
+}
+/*分类页*/
+div.categoryMenu{
+	width: 160px;
+	background-color: #e2e2e3;
+	margin-left: 125px;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+div.categoryMenu a{
+	color: #000;
+}
+div.categoryMenu a:hover{
+	color: lightskyblue;
+	text-decoration: none;
+}
+div.categoryMenuItem{
+	line-height: 30px;/*所占行高*/
+	padding-left: 10px;
+	font-size: 14px;
+}
+div.categoryMenuItem:hover{
+	background-color:#ffffff;
+}
+div.productsAsideCategorys{
+	width: 800px;
+	height: 510px;
+	background-color: #ffffff;
+	margin-left: 285px;/*通过绝对调整位置来并列div*/
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	display:none;
+}
+div.Categorys_row{
+	line-height: 60px;/*所占行高*/
+	margin-left: 50px;
+	border-bottom:1px dashed #e2e2e3;/*虚线*/
+}
+div.Categorys_row a{
+    color:#999;
+    margin-left:20px;
+    font-size: 14px;
+}
+div.Categorys_row a:hover{
+    text-decoration:none;
+    color:#C40000;
+}
+/*产品页*/
+div.productList{
+	background-color: #F5F5F5;
+	width:1013px;
+	margin:10px auto;
+}
+div.eachProductList{
+	padding:30px 0px 0px 10px ;
+}
+div.productItem{
+	display:inline-block;
+	background-color:#ffffff;
+	width: 175px;
+	height: 285px;
+	border: 1px solid white;
+	margin: 10px 10px;
+}
+div.productItem span.productItemDesc{
+	font-size: 12px;
+	color: #666666;
+	display: block;/*使文字换行*/
+	padding: 16px;
+}
+div.productItem a.productItemDescLink{
+	display: inline-block;
+	height: 66px;
+	text-decoration:none;
+}
+div.productItem span.price{
+	font-size: 16px;
+	color: #FF003A;
+	display: block;
+	padding-left: 16px;
+	margin-top: -10px;
+}
+div.productItem img{
+	width: 173px;
+	height: 190px;
+}
+div.productItem img:hover{/*图片反光*/
+	opacity: 0.7;
+	filter: alpha(opacity = 70);
+}
+span.tubiao{
+	width:5px;
+	height:20px;
+	background-color:#19C8A9;
+	margin-left:10px;
+	display:inline-block;/*span不可指定大小*/
+	vertical-align:top;
+}
+span.productListTitle{
+	font-size:16px;
+    font-family:微软雅黑;
+    font-weight:bold;
+    color:#54514e;
+    margin-left:20px;
+}
+div.end{
+	height:100px;
+}
+div.end img{/*居中*/
+	margin:30px auto;
+	display:block;
+	inline-height:50px;
+}
+/*******************************cat3.css**********************************/
+div.categoryPageDiv{
+ 	max-width: 1013px; 
+	margin: 10px auto;
+/*只有两个参数,第一个参数是定上下,第二个参数是定左右的,所以
+左右自动适应,上下外边各10px.左右两边相等间距*/	
+}
+table.categorySortBarTable td.grayColumn {
+	background-color: #F1EDEC;
+}
+div.categorySortBar{
+	background-color:#FAF9F9;
+	margin-top:30px;
+	height:30px;
+}
+table.categorySortBarTable{
+	display:inline-block;/*table自动换行*/
+	table-layout:automatic;
+	border-collapse: collapse;/*合并边框*/
+}
+table.categorySortBarTable td{
+	border:1px solid #CCCCCC;
+	font-size:12px;
+	padding:4px;
+}
+table.categorySortBarTable td:hover{/*td可以hover*/
+	background-color: #F1EDEC;
+}
+table.categorySortBarTable a{
+	color:#795f59;
+	text-decoration:none;
+}
+table.categorySortBarTable a:hover{
+	color:#C40000;
+}
+/*第二个表格*/
+table.categorySortBarTable input{
+	border-width: 0px;
+	height: 15px;
+	width: 60px;
+}
+table.categorySortBarTable td.mark{
+	width: 5px;
+	vertical-align: middle;
+	background-color: #d9d2d0;
+}
+
+body{
+	font-size: 12px ;
+	font-family: Arial;
+}
+/*产品列表*/
+div.searchResultDiv {
+	max-width: 1013px;
+	margin: 10px auto;
+	min-height: 300px;
+}
+
+div.noMatch {
+	font-size: 20px;
+	width: 200px;
+	margin: 100px auto;
+	color: #888;
+}
+
+div.productUnit{
+	width: 225px;
+	height: 338px;
+	border:1px solid #eee;
+	background-color: white;
+	margin: 12px 5px;
+	float: left;
+}
+div.productUnit:hover{
+	border:2px solid #C40000;
+}
+div.productUnitFrame{
+	height:100%;
+}
+div.productUnit img.productImage{
+	width: 100%;
+	height: 190px;
+}
+div.productUnit span.productPrice{
+	display:block;
+	font-size:18px;
+	color:#CC0000;
+	margin:0px 0px 10px 5px;
+}
+div.productUnit a.productLink{
+	color:#333333;
+	display:block;
+	margin-bottom:10px;
+}
+div.productUnit a:hover{
+	color:#C40000;
+}
+div.productUnit a.tmallLink{
+	color:#808080;
+	display:block;
+	margin-bottom:15px;
+	text-decoration: underline;
+}
+div.productUnit div.productInfo{
+	border-top:1px solid #eee;
+	color:#999999;/*字体*/
+}
+div.productUnit span.monthDeal, div.productUnit span.productReview{
+	display: inline-block;
+	width: 90px;
+	height:33px;
+	padding-top: 5px;
+	padding-left: 5px;
+	border-right:1px solid #EEEEEE;
+}
+div.productUnit span.productReviewNumber{
+	font-weight: bold;
+	color: #3388BB;
+}
+div.productUnit span.productDealNumber{
+	font-weight: bold;
+	color: #B57C5B;
+}
+div.productUnit span.wangwang{
+	padding-left: 5px;
+}
+/*******************************countCss.css**********************************/
+div.buyPageDiv{
+	margin: 20px auto;
+	max-width: 1013px;
+}
+div.address{
+	margin: 20px 5px;
+	text-align: left;
+}
+div.addressTip{
+	color: #333333;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: 30px;
+}
+table.addressTable{
+	margin: 20px 20px;
+	width: 600px;
+	font-size:12px;
+}
+table.addressTable td{
+	color: #333333;
+	vertical-align: top;
+	padding-right: 5px;
+	text-align: left;
+	height: 30px;
+}
+table.addressTable td.firstColumn{
+	width: 100px;
+}
+table.addressTable td textarea{
+	border: 1px solid #AFAFAF;
+	margin-bottom: 10px;
+	width: 400px;
+}
+table.addressTable td input{
+	border: 1px solid #AFAFAF;
+	width: 200px;
+}
+span.redStar{
+	color: red;
+	font-size: 16px;
+}
+/* 确认订单信息 */
+div.productListTip{
+	color: #333333;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: left;
+	margin-bottom: 30px;
+}
+table.productListTable{
+	width: 100%;
+	border-collapse: separate;
+	font-size:12px;
+}
+table.productListTable th{
+	color: #999999;
+	font-family: 宋体;
+	font-weight: normal;
+	font-size: 12px;
+	text-align: center;
+	padding-bottom: 5px;
+}
+table.productListTable tr.rowborder td{
+	background-color:#b2d1ff;
+	height:3px;
+	border-right: 2px solid #fff;
+}
+th.productListTableFirstColumn{
+	text-align: left !important;
+}
+img.tmallbuy{
+	width: 15px;
+}
+a.marketLink{
+	color: black;
+}
+a.marketLink:hover{
+	color: black;
+	text-decoration: underline;
+}
+span.wangwangGif{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	background-image:url(../../img/site/wangwang.gif);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-attachment: scroll;
+	background-position: -83px -0px;
+	position: relative;
+	top: 8px;
+	left: 2px;
+}
+tbody.productListTableTbody td{
+	text-align: center;
+}
+tbody.productListTableTbody td.orderItemFirstTD{
+	text-align: left;
+}
+tbody.productListTableTbody tr.orderItemTR{
+	height:60px;
+}
+tr.orderItemTR td{
+	border-bottom: 1px solid #E5E5E5;
+}
+tr.orderItemTR td{
+	padding: 10px 0px;
+}
+img.orderItemImg{
+	width: 50px;
+	height: 50px;
+	border: 1px solid #E9E9E9;
+}
+tr.orderItemTR td.orderItemFirstTD{
+	border-bottom: 1px solid #fff !important;
+}
+td.orderItemProductInfo{
+	text-align:left !important;
+}
+label.orderItemDeliveryLabel{
+	font-weight: normal;
+	color: #666666;
+}
+td.orderItemProductInfo a.orderItemProductLink{
+	color: #666666;
+	display: block;
+}
+td.orderItemProductInfo img{
+	height: 16px;
+}
+span.orderItemUnitSum{
+	color: #CC0000;
+	font-weight: bold;
+}
+div.orderItemListumDiv{
+	border-top: 2px solid #B4D0FF;
+	background-color: #F2F6FF;
+	height:40px;
+}
+div.orderItemListumDiv div,div.orderItemListumDiv span{
+	padding:10px 10px;
+	font-size:12px;
+	color: #8f8f8f;
+}
+div.orderItemTotalSumDiv{	
+	color: #8f8f8f;
+	font-size:12px;
+	margin: 40px;
+	height: 40px;
+}
+span.orderItemTotalSumSpan{
+	color: #C40000 !important;
+	font-size: 22px;
+	font-weight: bold;
+	border-bottom: 1px dotted #F2F6FF;
+}
+button.submitOrderButton{
+	border: 1px solid #C40000;
+	background-color: #C40000;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;
+	font-weight: 700;
+	color: white;
+	float: right;
+	display:inline-block;
+	margin:0px 10px;
+	width:180px;
+	height: 40px;
+}
+textarea.leaveMessageTextarea {
+    border: 1px solid #FFAD35;
+    width: 250px;
+    height: 60px;
+    resize: none;
+    margin-left:0px;
+}
+span.leaveMessageTextareaSpan {
+    display: inilne-block;
+}
+span.inputSpan{
+	margin-left:100px;
+}
+input.leaveMessageInput{
+	margin-left:0px;
+}
+/*******************************myOrderCss.css**********************************/
+body{
+	font-size: 12px;
+	font-family: Arial;
+}
+/* div{ */
+/* 	border:1px solid #00ffff; */
+/* } */
+div.boughtDiv{
+	max-width: 1013px;
+	margin: 10px auto;
+}
+/* 订单列表标题 */
+div.orderType div{
+	border-bottom: 2px solid #E8E8E8;
+	float: left;
+}
+div.orderType a{
+	border-right: 1px solid #E8E8E8;
+	display:inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	color: black;
+	margin-bottom: 10px;
+	padding: 0px 20px;
+	text-decoration: none;
+}
+div.orderType a:hover{
+	color: #C40000;
+	text-decoration: none;
+}
+div.orderType div.selectedOrderType{
+	border-bottom: 2px solid #C40000;
+}
+div.orderType div.selectedOrderType a{
+	color: #C40000;
+}
+div.orderTypeLastOne{
+	overflow: hidden;
+	float: none !important;
+	border-bottom: 2px solid #E8E8E8;
+	height:35px;
+}
+a.noRightborder{
+	border-right-width:0px !important;
+}
+table.orderListTitleTable{
+	border: 1px solid #E8E8E8;
+	width: 100%;
+	margin: 20px 0px;
+	background-color: #F5F5F5;
+	text-align: center;
+	font-size:12px;
+}
+table.orderListTitleTable td{
+	padding: 12px 0px;
+}
+/* 订单列表 */
+table.orderListItemTable{
+	border: 2px solid #ECECEC;
+	width: 100%;
+	margin: 20px 0px;
+	font-size:12px;
+}
+table.orderListItemTable:hover{
+	border: 2px solid #aaa !important;
+}
+table.orderListItemTable td{
+	padding: 8px 10px;
+}
+tr.orderListItemFirstTR{
+	background-color: #F1F1F1;
+}
+ div.orderItemWangWangGif{/*导入旺旺客服gif */
+	display: inline-block;
+	width: 67px;
+	height: 22px;
+	background-image:url(../../img/site/wangwang.gif);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-attachment: scroll;
+	background-position: -0px -0px;
+	position: relative;
+	top: 0px;
+	left: 2px;
+}
+td.orderItemDeleteTD{
+	text-align: right;/*垃圾箱类似font 靠右*/
+}
+span.orderListItemDelete{
+	display: inline-block;
+	margin: 0px 10px;
+	color: #999999;
+	font-size: 16px;
+}
+div.orderListItemProductLinkOutDiv{
+	position: relative;
+	height: 80px;
+}
+div.orderListItemProductLinkInnerDiv{
+	position: absolute;
+	bottom: 0px;
+}
+div.orderListItemProductoriginalPrice{
+	color: #999999;
+	font-size: 14px;
+}
+div.orderListItemProductPrice{
+	color: #3C3C3C;
+	font-size: 14px;
+}
+td.orderListItemNumberTD{
+	text-align: center;
+}
+td.orderItemOrderInfoPartTD{
+	border: solid 1px #ECECEC;
+}
+span.orderListItemNumber{
+	color: #3C3C3C;
+}
+td.orderListItemProductRealPriceTD{
+	text-align: center;
+}
+div.orderListItemProductRealPrice{
+	color: #3C3C3C;
+	font-size: 14px;
+	font-weight: bold;
+}
+div.orderListItemPriceWithTransport{
+	color: #6C6C6C;
+	font-size: 12px;
+}
+td.orderListItemButtonTD{
+	text-align: center;
+}
+button.orderListItemReview{
+	border: 1px solid #DCDCDC;
+	background-color: #fff;
+	border-radius: 2px;
+	color: #3C3C3C;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 6px 12px;
+}
+button.orderListItemReview:hover{
+	border-color: #C40000;
+	color: #C40000;
+}
+button.orderListItemConfirm{
+	background-color: #66B6FF;
+	border-radius: 2px;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	border-width: 0px;
+	padding: 6px 12px;
+}
+button.orderListItemConfirm:hover{
+	background-color: #118ADB;
+}
+/*******************************otherPageCss.css**********************************/
+/* 支付界面 */
+div.aliPayPageDiv{
+	max-width: 1013px;
+	margin: 10px auto;
+	color: black;
+}
+div.payDiv{
+	text-align:center;
+	margin-top:30px;
+}
+div.payDiv div{
+}
+div.payDivWord{
+	font-size:12px;
+	color:#666666;
+	margin-bottom:10px;
+}
+div.payDivPrice{
+	font-size:20px;
+	font-weight:bold;
+	color: #FF6600;
+	margin-bottom:20px;
+}
+img.paymeImg{
+	width:200px;
+}
+button.payBtn{
+	margin-top:30px;
+	background-color: #00AAEE;
+	border: 1px solid #00AAEE;
+	font-size: 14px;
+	font-weight: 700;
+	color: white;
+	width:100px;
+	height:30px;
+}
+/* 下单成功界面 */
+div.sucessPayDiv{
+	max-width: 1013px;
+	margin: 10px auto;
+	color: black;
+	border:1px solid #e1e1e1;
+}
+div.titleDiv{
+	width:100%;
+	background-color:#ECFFDC;
+	padding: 17px 0px 10px 25px;
+}
+div.titleDiv span.paySuccessSpan{
+	font-weight: bold;
+	font-size: 14px;
+	margin-left: 10px;
+	color:#353535;
+}
+div.payInfoDiv{
+	padding: 20px 35px;
+	font-size: 12px;
+	padding-bottom: 20px;
+}
+div.payInfoDiv li{
+	background-image:url(/img/site/li_dot.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-attachment: scroll;
+	background-position: 0px 13px;
+	list-style-type: none;
+	color: #333333;
+	padding-left: 15px;
+	padding-top: 10px;
+}
+span.payedInfoPrice{
+	color: #B10000;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: arial;
+}
+span.payOperSpan{
+	margin-left:39px;
+}
+div.payedSeperateLine{
+	border-top: 1px dotted #D4D4D4;
+	margin: 0px 31px;
+}
+div.warningDiv{
+	padding: 20px 20px;
+	font-size: 12px;
+}
+div.warningDiv span.warningSpan,span.warningContextSpan{
+	font-weight: bold;
+}
+span.warningContextSpan{
+	color: #C40000;
+}
+/*确认收货*/
+div.comfirmReceiptDiv{
+	max-width: 1013px;
+	margin: 10px auto;
+}
+div.comformPayLogo{
+	text-align:center;
+}
+div.scheduleTime span{
+	padding:0px 25px 0px 50px;
+	color:#7c7c7c;
+}
+div.agreeDiv{
+	font-weight: bold;
+	font-size: 16px;
+	padding:40px 0px 10px 0px;
+	border-bottom:1px solid #ADC8E6;
+}
+div.orderConInfo{
+	padding:20px 0px 0px 15px;
+}
+table.orderConTable{
+	width:99%;
+	margin: 20px 10px 20px 10px;
+	border:1px solid #c8c8c8;
+	border-collapse:collapse;
+	font-size:12px;
+}
+table.orderConTable thead{
+	background:#E8F2FF;
+	height: 33px;
+}
+table.orderConTable tr{
+	border: 1px solid #DDDDDD;
+}
+table.orderConTable th{
+	text-align:center;
+}
+table.orderConTable img{
+	border: 1px solid #DDDDDD;
+	margin:20px 15px; 
+}
+table.orderConTable td{
+	text-align:center;
+}
+td.confirmPayOrderItemProductLink{
+	text-align:left !important;
+	padding-left:20px;
+}
+td.confirmPayOrderItemProductLink a{
+	color:#666666;
+}
+span.confirmPayOrderItemProductPrice{
+	font-size:20px;
+	color:#666666;
+	font-weight: bold;
+}
+span.confirmPayOrderItemPay{
+	color: #C40000;
+}
+div.confirmPayOrderInformation{
+	width: 100%;
+	margin:20px auto;
+}
+table.confirmPayOrderDetailTable{
+	margin:10px 0px 30px 10px;
+	width:90%;
+	border-top: 1px solid #e8e8e8;
+}
+table.confirmPayOrderDetailTable td{
+	margin-bottom:10px;
+	height:40px;
+}
+table.confirmPayOrderDetailTable td.value{
+	padding-left:150px;
+}
+table.confirmPayOrderDetailTable td.title{
+	padding-left:40px;
+}
+table.confirmPayOrderDetailTable span.wangwangLogo{
+	background-image:url(/img/site/wangwang.gif);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	display: inline-block;
+	width: 67px;
+	height: 22px;
+}
+div.warningconfirmPay{
+	border: 1px solid #ff8000;
+	width:1013px;
+	height:150px;
+	padding:20px 40px;
+}
+div.warningconfirmPayContext{
+	font-size: 18px;
+	color: red;
+	font-weight: bold;
+	margin-bottom:40px;
+}
+button.confirmPayButton{
+	background-color:#ff8000;
+	border: 1px solid #ff8000;
+	color:white;
+	font-size:14px;
+	border-radius: 4px;
+	width:80px;
+	height: 30px;
+	font-weight: bold;
+}
+/*评价页面*/
+div.reviewPagewDiv{
+	max-width: 1013px;
+	margin: 10px auto;
+}
+div.reviewImg{
+	display:inline-block;
+	float:left;
+	width:450px;
+	text-align:center;
+	border:1px solid #e8e8e8;
+}
+div.reviewImgInfo{
+	border-top:1px solid #e8e8e8;
+	display:inline-block;
+	height:402px;	
+	padding:30px 15px;
+}
+div.reviewImgInfo div.reviewImgInfoTitle{
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom:20px;
+}
+table.reviewImgInfoTable td{
+	padding:7px 20px;
+	font-size:12px;
+	color:#9b9b9b;	
+}
+span.reviewImgInfoPrice{
+	font-size: 20px;
+	font-weight: bold;
+	color:#C40000;
+}
+span.sellOfMonth{
+	font-size: 14px;
+	font-weight: bold;
+	color:#C40000;
+}
+div.reviewImgOderInfo{
+	border:1px solid #e8e8e8;
+	height:150px;
+	width:100%;
+	background-color: #fffdfb;
+	font-size: 12px;
+	color:#666666;
+	padding:20px 50px;
+	margin-top:20px;
+}
+div.reviewImgOderInfo img{
+	border:1px solid #e8e8e8;
+}
+div.reviewImgOderInfoConext{
+	background-color: #fff;
+	height:41px;
+	border:1px solid #e8e8e8;
+	border-left:1px solid #fff;
+}
+div.reviewImgOderInfo span.reviewImgOderInfoBuyDate{
+	left:-7px;
+}
+div.reviewImgOderInfo span.reviewImgOderInfoBuy{
+	left:-11px;
+	border-right:1px solid #e8e8e8;
+}
+div.reviews{
+	margin:20px 0px;
+}
+div.reviewsTotal span.reviewsTotalSpan{
+	display:inline-block;
+	border:1px solid #b6b6b6;
+	line-height:50px;
+	width:170px;
+	padding-left:40px;	
+	background-color:#F6F5F1;
+	float:left;
+	font-size: 16px;
+	font-weight: bold;
+}
+div.reviewsTotal span.reviewsAmount{
+	color:#245ae8;
+	margin-left:5px;
+}
+div.reviewsTotal span.coverTop{
+	display:inline-block;
+	height:5px;
+	background-color:#C40000;
+	width:170px;
+	position:relative;
+	left:-170px;
+	float:left;
+}
+div.reviewsTotal span.cover{
+	display:inline-block;
+	height:10px;
+	background-color:#fff;
+	width:842px;
+	position:relative;
+	top:37px;
+	border:1px solid #b6b6b6;
+	border-left:1px solid transparent;
+	float:left;
+	left:-1px;
+	background-color:#F6F5F1;
+}
+/*显示提交的评价**/
+div.reviewDate {
+	width: 100px;
+}
+div.reviewDivlistReviewsEach div {
+	display: inline-block;
+}
+div.reviewDivlistReviewsEach {
+    padding: 20px;
+    border-bottom: 1px solid #ECECEC;
+}
+div.reviewDate {
+	color: #CCCCDD;
+}
+
+div.reviewContent {
+	color: #333333;
+	width: 698px;
+}
+
+div.reviewUserInfo {
+	color: #333333;
+}
+div.reviewProduct{
+	border:1px solid #b6b6b6;
+	height:330px;
+	width:100%;
+	margin:20px 0px;
+}
+div.reviewProductArea{
+	background-color:#EFEFEF;
+	width:100%;
+	padding:20px 30px;
+	height:270px;
+}
+div.title{
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom:20px;
+}
+table.reviewTable{
+	background-color:#fff;
+	height:180px;
+	width:600px;
+}
+table.reviewTable td.reviewProductTitle{
+	border-right:1px solid #d4d4d4;
+	width:80px;
+	text-align:center;
+}
+table.reviewTable td.reviewArea{
+	padding:10px;
+}
+table.reviewTable td.reviewArea textarea{
+	width:500px;
+	height:160px;
+	border-width: 0px;
+	resize: none;
+}
+div.makeReviewButtonDiv{
+	background-color: white;
+	text-align: center;
+	padding: 15px;
+}
+div.makeReviewButtonDiv button{
+	width: 72px;
+	height: 26px;
+	border-radius: 2px;
+	background-color: #C40000;
+	color: white;
+	border-width: 0px;
+	font-weight: bold;
+}
+/*登录页面*/
+div.loginDiv div.simpleLogo{
+	margin:30px 0px;
+}
+img.backgroundImg{
+	display: block;
+	margin: 0px auto;
+}
+div.loginPageDiv{
+	background-color: white;
+	position: absolute;
+	right: 80px;
+	top: 180px;
+	width: 350px;
+	height: 400px;
+	padding:60px 20px;
+}
+div.loginContext{
+	font-size: 16px;
+	font-weight: bold;
+	color:#373737;
+}
+div.loginInput{
+	margin:20px;
+	font-size: 12px;
+	height:42px;
+}
+div.loginInput span.loginInputIcon{
+	margin: 0px;
+	background-color: #CBCBCB;
+	width: 40px;
+	height: 40px;
+	display:inline-block;
+	position: relative;
+	top:-2px;
+	border:1px solid #CBCBCB;	
+}
+span.loginInputIcon span.glyphicon{
+	font-size: 22px;
+	position: relative;
+	left: 9px;
+	top: 9px;
+	color: #606060;
+}
+div.loginInput input{
+	display:inline-block;
+	width:223px;
+	height:40px;
+	position: relative;
+	left: -5px;
+ 	border:1px solid #CBCBCB;	
+}
+div.loginDiv a{
+	font-size: 12px;
+	color:#666666;
+}
+div.loginDiv a:hover{
+	text-decoration:none;
+	color: #C40000;
+}
+div.loginBtn{
+	padding-top:30px;
+}
+button.redButton{
+	color: white;
+	background-color: #C40000;
+	font-size: 14px;
+	font-weight: bold;
+}
+/* 	提示栏 */
+div.loginErrorMessageDiv {
+	width: 300px;
+	position: absolute;
+	top: 20px;
+	display: none;
+}
+
+div.loginErrorMessageDiv div.alert {
+	padding: 5px !important;
+}
+
+/*注册界面*/
+
+div.logupDiv{
+	margin: 30px auto;
+	text-align: center;
+	max-width:1013px;	
+}
+
+div.registerErrorMessageDiv {
+	width: 600px;
+	margin: 0px auto;
+	height: 50px;
+	visibility: hidden;
+}
+table.registerTable{
+	color: #3C3C3C;
+	font-size: 14px;
+	table-layout: fixed;
+	margin-top: 20px;
+}
+table.registerTable td{
+	padding: 10px 30px;
+}
+table.registerTable input{
+	border: 1px solid #DEDEDE;
+	width: 213px;
+	height: 36px;
+	font-size: 14px;
+}
+table.registerTable button{
+	width: 170px;
+	height: 36px;
+	border-radius: 2px;
+	color: white;
+	background-color: #C40000;
+	border-width: 0px;
+}
+td.registerTip{
+	font-weight: bold;
+}
+td.registerTableLeftTD{
+	width: 300px;
+	text-align: right;
+}
+td.registerTableRightTD{
+	width: 300px;
+	text-align: left;
+}
+td.registerButtonTD{
+	text-align: center;
+}
+/* 注册成功页面 */
+div.registerSuccessDiv {
+	margin: 10px 20px;
+	background-color: #F3FDF6;
+	border: 1px solid #DEF3E6;
+	font-size: 16px;
+	color: #3C3C3C;
+	padding: 20px 130px;
+}
+/*******************************productPageCss.css**********************************/
+div.imgAndInfo{
+	max-width:1013px;
+	margin:10px auto;
+/* 	border: 1px solid #ff0000; */
+}
+div.imgInimgAndInfo img{
+	width:200px;
+}
+div.imgInimgAndInfo{
+	display:inline-block;
+	float:left;
+	margin:10px 0px 0px 10px;
+}
+div.infoInimgAndInfo{
+	overflow:hidden;/*使对齐*/
+	padding-top:20px;
+	padding-left:20px;
+	padding-right:20px;
+}
+div.infoInimgAndInfo div.productTitle{
+	font-weight:bold;
+	font-size:16px;
+}
+div.productSubTitle{
+	color:#e60000;
+	margin-top:2px;
+	font-size:12px;
+}
+div.infoInimgAndInfo div.juhuasuan{
+	background-color: #2DA77A;
+	color: white;
+	text-align: center;
+	line-height: 40px;
+	margin-top: 10px;
+}
+div.infoInimgAndInfo span.juhuasuanBig{
+	font-size: 18px;
+	font-weight: bold;
+	font-family: 黑体;
+}
+div.infoInimgAndInfo span.juhuasuanTime{
+	color: #FFC057;
+	font-weight: bold;
+}
+div.productPriceDiv{
+	background-image:url(../../img/site/priceBackground.png);
+	height: 100px;
+	padding: 10px;
+	color: #999999;
+	font-size:12px;
+}
+div.gouwujuanDiv img{
+	width:60px;
+}
+div.gouwujuanDiv span{
+	margin-left:5px;
+}
+div.orignalDiv{
+	margin-top:5px;
+	margin-bottom:6px;
+}
+div.orignalDiv span.originalPrice{
+	color: #333333;
+	text-decoration: line-through;
+}
+div.orignalDiv span.originalPriceYuan{
+	color: #333333;
+	margin-left:50px;
+}
+div.promotionDiv span.promotionPrice{
+	color: #c40000;
+	font-family: Arial;
+	font-size: 30px;
+	font-weight: bold;
+}
+div.promotionDiv span.promotionPriceYuan{
+	color: #c40000;
+	font-family: Arial;
+	font-size: 20px;
+	margin-left:35px;
+}
+div.promotionDiv span.promotionPriceDesc{
+	position: relative;
+	left: 0px;
+	top: -10px;
+}
+div.productSaleAndReviewNumber{
+	margin-top:20px;
+	margin-bottom:20px;
+	font-size:12px;
+	color:#999999;
+	text-align:center;
+	height:40px;
+	border-top:1px dotted #C9C9C9;
+	border-bottom:1px dotted #C9C9C9;
+}
+div.productSaleAndReviewNumber div{
+	display:inline-block;
+	width:49%;
+	position:relative;
+	top:10px;
+}
+div.productSaleAndReviewNumber div:first-child {
+	border-right:1px dotted #C9C9C9;
+	
+}
+div.productSaleAndReviewNumber span.redColor{
+	font-weight:bold;
+	color: #c40000;
+}
+div.productNumber{
+	color:#999999;
+	font-size:12px;
+	margin-bottom:20px;
+}
+div.productNumber span.productNumberSettingSpan input{
+	width:45px;
+	height:32px;
+	border:1px solid #8f8f8f;
+}
+div.productNumber span.updown img{
+	display:inline-block;
+	vertical-align:top;/*?*/
+}
+div.productNumber span.updown{
+	border: 1px solid #999;
+	display: block;
+	width: 20px;
+	height: 14px;
+	text-align: center;
+	padding-top:4px;
+}
+div.productNumber span.updownMiddle{
+	height: 4px;
+	display: block;
+  }
+div.productNumber span.arrow{
+	display: inline-block;
+	width: 22px;
+	height: 32px;
+	vertical-align:top;
+}
+div.serviceCommitment{
+	color:#999999;
+	font-size:12px;
+	margin-bottom:20px
+}
+div.serviceCommitment a{
+	text-decoration:none;
+	color:#616161;
+}
+div.buyDiv{
+	text-align:center;
+}
+div.buyDiv button{
+	width:160px;
+	height:40px;
+	margin-right:20px;
+	border: 1px solid #C40000;
+	font-size:16px;
+}
+div.buyDiv button.buyButton{
+	background-color: #FFEDED;
+	color:#C40000;
+}
+div.buyDiv button.addCartButton{
+	background-color: #C40000;
+	color:#ffffff;
+}
+/*产品详情*/
+/* 图片 */
+div.categoryPictureInProductPageDiv {
+	width: 1013px;
+	margin: 0px auto;
+	text-align: center;
+}
+div.imgAndInfo img.bigImg{
+	width: 400px;
+	height: 400px;
+	padding: 20px;
+	border: 1px solid #F2F2F2;
+}
+div.imgAndInfo div.smallImageDiv{
+	width: 80%;
+	margin: 20px auto;
+}
+div.imgAndInfo img.smallImage{
+	width: 60px;
+	height: 60px;
+	border: 2px solid white;
+}
+div.imgAndInfo img.smallImage:hover{
+	border: 2px solid black;
+}
+div.productDetailDiv{
+	width: 790px;
+	margin: 40px auto;
+}
+/* div{ */
+/* 	border: 1px solid #00ffff; */
+/* } */
+div.productDetailTopPart{
+	height:50px;
+	border: 1px solid #DFDFDF;
+	border-left-width: 0px;
+	font-size:12px;
+}
+div.productDetailTopPart a.selected{
+	border-left: 1px solid #cfbfb1;
+	border-right: 1px solid #cfbfb1;
+	color: #cc0000;
+	display: inline-block;
+	font-weight: bold;
+	line-height: 48px;
+	width: 90px;
+	text-align: center;
+	position: relative;
+}
+div.productDetailTopPart a.selected:before{
+	content:"";
+	display: block;
+	border-width: 1px;
+	border-color: #b00000;
+	border-style: solid;
+	width: 90px;
+	height: 0;
+	position: absolute;
+	top: -1px;
+	margin-left: -1px;
+}
+div.productDetailTopPart a.selected:after{
+	content: "";
+	display: block;
+	border-color: #b00000 transparent transparent;
+	border-style: solid;
+	border-width: 5px;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: -1px;
+	left: 50%;
+	margin-left: -5px;
+}
+div.productDetailTopPart a.productDetailTopReviewLink{
+	color: #000000;
+	display: inline-block;
+	width: 90px;
+	text-align: center;
+}
+a.productDetailTopReviewLink span.productDetailTopReviewLinkNumber{
+	color: #005ab5;
+}
+div.productParamterPart{
+	color: #808080;
+	font-size:12px;
+	border: 1px solid #DFDFDF;
+}
+div.productParamterPart div{
+	max-width:600px;
+	padding-left:40px;
+}
+div.productParamterPart div.productParamter{
+	padding-top:40px;
+	padding-bottom:20px;
+	font-weight: bold;
+	color:#9a9a9a;
+}
+div.productParamterPart div.productParamterList span{
+	margin-right:20px;
+	margin-bottom:20px;
+	display:inline-block;
+	width:150px;
+}
+div.productDetailImagesPart{
+	margin-top:20px;
+}
+div.productDetailImagesPart img{
+	width:100%;
+}
+/* 累积评价 */
+div.productReviewDiv{
+	width: 790px;
+	margin: 40px auto;
+}
+/* div{ */
+/* 	border: 1px solid #00ffff; */
+/* } */
+div.productReviewTopPart{
+	height:50px;
+	border: 1px solid #DFDFDF;
+	border-left-width: 1px;
+	font-size:12px;
+}
+div.productReviewTopPart a.selected{
+	border-left: 1px solid #cfbfb1;
+	border-right: 1px solid #cfbfb1;
+	color: #cc0000;
+	display: inline-block;
+	font-weight: bold;
+	line-height: 48px;
+	width: 90px;
+	text-align: center;
+	position: relative;
+}
+div.productReviewTopPart a.selected:before{
+	content:"";
+	display: block;
+	border-width: 1px;
+	border-color: #b00000;
+	border-style: solid;
+	width: 90px;
+	height: 0;
+	position: absolute;
+	top: -1px;
+	margin-left: -1px;
+}
+div.productReviewTopPart a.selected:after{
+	content: "";
+	display: block;
+	border-color: #b00000 transparent transparent;
+	border-style: solid;
+	border-width: 5px;
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: -1px;
+	left: 50%;
+	margin-left: -5px;
+}
+div.productReviewTopPart a.productReviewTopPartSelectedLink{
+	color: #000000;
+	display: inline-block;
+	width: 90px;
+	text-align: center;
+}
+a.productReviewTopPartSelectedLink span.productReviewTopReviewLinkNumber{
+	color: #005ab5;
+}
+a:hover{
+	color:#C40000;
+	text-decoration:none;
+}
+div.productReviewContentPart{
+	padding-top: 50px;
+}
+div.productReviewItem{
+	border-bottom: 1px solid #E3E3E3;
+	margin: 10px 0px;
+	font-size:12px;
+}
+div.productReviewItem div.productReviewItemDesc{
+	width: 80%;
+	display: inline-block;
+	float: left;
+	color: #333333;
+	margin: 5px 20px;
+}
+div.productReviewItem  div.productReviewItemDate{
+	margin-top: 15px;
+	color: #CCCCCC;
+}
+div.productReviewItem  div.productReviewItemUserInfo{
+	margin: 5px 20px;
+	padding: 20px 0;
+}
+div.productReviewItem span.userInfoGrayPart{
+	color: #999999;
+}
+/*******************************ShoppingCartCss.css**********************************/
+div.cartDiv{
+	max-width: 1013px;
+	margin: 10px auto;
+	color: black;
+}
+/* div{  */
+/*  	border: 1px solid #00ffff;  */
+/* } */
+/* 结算按钮 */
+div.cartTitle button{
+	background-color: #AAAAAA;
+	border: 1px solid #AAAAAA;
+	color: white;
+	width: 53px;
+	height: 25px;
+	border-radius: 2px;
+}
+div.cartTitle span.cartTitlePrice{
+	color: #C40000;
+	font-size: 14px;
+	font-weight: bold;
+	margin-right: 3px;
+}
+div.cartFoot{
+	background-color: #E5E5E5;
+	line-height:50px;
+	margin: 20px 0px;
+	color: black;
+	padding-left: 20px;
+}
+div.cartFoot button{
+	background-color: #AAAAAA;
+	border: 0px solid #AAAAAA;
+	color: white;
+	width: 120px;
+	height: 50px;
+	font-size: 20px;
+	text-align: center;
+}
+span.cartSumNumber{
+	color: #C40000;
+	font-weight: bold;
+	font-size: 16px;
+}
+span.cartSumPrice{
+	color: #C40000;
+	font-weight: bold;
+	font-size: 20px;
+}
+img.cartProductItemIfSelected, img.selectAllItem{
+	cursor: pointer;
+}
+/* 订单表 */
+table.cartProductTable{
+	width: 100%;
+	font-size:12px;
+}
+table.cartProductTable th{
+	font-weight: normal;
+	color: #3C3C3C;
+	padding: 20px 20px;
+}
+tr.cartProductItemTR{
+	border: 1px solid #CCCCCC;
+}
+tr.cartProductItemTR td{
+	padding: 20px 20px;
+}
+img.cartProductImg{
+	border: 1px solid #EEEEEE;
+	width: 80px;
+	height: 80px;
+	padding: 1px;
+}
+table.cartProductTable th.selectAndImage{
+	width:140px;
+}
+table.cartProductTable th.operation{
+	width:80px;
+}
+div.cartProductLinkOutDiv{
+	position: relative;
+	height: 80px;
+}
+a.cartProductLink{
+	color: #3C3C3C;
+}
+a.cartProductLink:hover{
+	color: #C40000;
+	text-decoration: underline;
+}
+div.cartProductLinkInnerDiv{
+	position: absolute;
+	bottom: 0;
+	height: 20px;
+}
+span.cartProductItemOringalPrice{
+	text-decoration: line-through;
+	color: #9C9C9C;
+	display: block;
+	font-weight: bold;
+	font-size: 14px;
+}
+span.cartProductItemPromotionPrice , span.cartProductItemSmallSumPrice{
+	font-family: Arial;
+	font-size: 14px;
+	font-weight: bold;
+	color: #C40000;
+}
+div.cartProductChangeNumberDiv{
+	border: solid 1px #E5E5E5;
+	width: 80px;
+}
+div.cartProductChangeNumberDiv a{
+	width: 14px;
+	display: inline-block;
+	text-align: center;
+	color: black;
+	text-decoration: none;
+}
+div.cartProductChangeNumberDiv input{
+	border: solid 1px #AAAAAA;
+	width: 42px;
+	display: inline-block;
+}
+/*************modal********************************************/
+div.loginDivInProductPageModalDiv {
+	width: 350px;
+}
+
+div.deleteConfirmModalDiv {
+	width: 350px;
+}
+
+div.loginDivInProductPage {
+	background-color: white;
+	width: 350px;
+	height: 400px;
+	padding: 60px 25px 80px 25px;
+}
+
+div.loginSmallDiv {
+	background-color: white;
+	position: absolute;
+	right: 180px;
+	top: 180px;
+	width: 350px;
+	height: 400px;
+	padding: 60px 25px 80px 25px;
+}
+
+div.loginErrorMessageDiv {
+	width: 300px;
+	position: absolute;
+	top: 20px;
+	display: none;
+}
+
+div.loginErrorMessageDiv div.alert {
+	padding: 5px !important;
+}
+
+div.buyErrorMessageDiv {
+	width: 300px;
+	top: 20px;
+ 	display: none; 
+}
+
+div.buyErrorMessageDiv div.alert {
+	padding: 5px !important;
+}
+
+div.login_acount_text {
+	color: #3C3C3C;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+div.loginInput {
+	border: 1px solid #CBCBCB;
+	margin: 20px 0px;
+}
+
+div.loginInput input {
+	display: inline-block;
+	border: 0px solid transparent;
+	width: 244px;
+	height: 30px;
+	position: relative;
+	left: 6px;
+	top: 6px;
+}
+
+div.loginInput span, div.loginInput input {
+	display: inline-block;
+}
+
+div.loginInput span.loginInputIcon {
+	margin: 0px;
+	background-color: #CBCBCB;
+	width: 40px;
+	height: 40px;
+}
+
+span.loginInputIcon span.glyphicon {
+	font-size: 22px;
+	position: relative;
+	left: 9px;
+	top: 9px;
+	color: #606060;
+}
+
+button.redButton {
+	color: white;
+	background-color: #C40000;
+	font-size: 14px;
+	font-weight: bold;
+}

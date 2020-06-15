@@ -243,10 +243,10 @@ public class ForeController {
             oi.setOid(-1);//未形成订单
             oi.setPid(p.getId());
             oi.setUid(user.getId());
-            orderItemService.add(oi);//加到数据库//加到了购物车里
+            orderItemService.add(oi);//加到数据库,数据库自动判断是不是应该为-2//加到了购物车里
         }else{
             oi.setNumber(oi.getNumber()+num);
-            orderItemService.update(oi);//更新数据库
+            orderItemService.update(oi);//更新数据库，数据库触发判断-2
         }
         return "success";
     }
@@ -273,10 +273,10 @@ public class ForeController {
             oi.setOid(-1);//未形成订单
             oi.setPid(p.getId());
             oi.setUid(user.getId());
-            orderItemService.add(oi);//加到数据库//加到了购物车里
+            orderItemService.add(oi);//加到数据库,数据库自动判断是不是应该为-2//加到了购物车里
         }else{
             oi.setNumber(oi.getNumber()+num);
-            orderItemService.update(oi);//更新数据库
+            orderItemService.update(oi);//更新数据库,数据库触犯判断-2
         }
         int oiid=oi.getId();//加到数据库后，自动将原来对象的id填充
         mav.setViewName("redirect:forebuy?oiid="+oiid);
@@ -295,6 +295,7 @@ public class ForeController {
             ois.add(oi);
         }
         session.setAttribute("ois", ois);//为了后面点击提交订单时调用到订单项
+        session.setAttribute("oiids",oiid);
         mav.addObject("sum", total);
         return mav;
     }
@@ -308,6 +309,13 @@ public class ForeController {
         ModelAndView mav=new ModelAndView("fore/cart");
         User user=(User) session.getAttribute("user");//已经模态登录
         List<OrderItem> ois=orderItemService.listInCart(user.getId());
+
+        String mess=(String)session.getAttribute("mess");
+        if(mess!=null){
+            mav.addObject("mess",mess);
+            session.removeAttribute("mess");
+        }
+
         mav.addObject("ois",ois);
         return mav;
     }
@@ -316,7 +324,7 @@ public class ForeController {
     @ResponseBody
     public String cartNumber(HttpSession session){
         int data=(int) session.getAttribute("cartTotalItemNumber");
-        System.out.println("***************************data**********    ==="+data);
+        //System.out.println("***************************data**********    ==="+data);
         return data+"";
     }
     //购物车页面
@@ -330,9 +338,32 @@ public class ForeController {
         //找到用户购物车下更改产品数量的订单项
         OrderItem oi=orderItemService.getUser_Product_notOrder(user.getId(),pid);
         oi.setNumber(number);
-        orderItemService.update(oi);
+        orderItemService.update(oi);//数据库触发判断-2
+        //再次
+        int oiid=oi.getId();
+        OrderItem oii=orderItemService.get(oiid);
+        if(oii.getOid()==-2)
+            return ""+oi.getProduct().getStock();
         return "success";
     }
+    //设置最新的stock
+    @RequestMapping("foregetStock")
+    @ResponseBody
+    public String getStock(int oiid){
+        //找到用户购物车下更改产品数量的订单项
+        OrderItem oi=orderItemService.get(oiid);
+        return oi.getProduct().getStock()+"";
+    }
+    //待购买的oi是否存在num>stock /库存为0 过期的
+    @RequestMapping("forecheckNum")
+    @ResponseBody
+    public String checkNum(int oiid){
+        OrderItem oi=orderItemService.get(oiid);
+        if(oi.getOid()==-2||oi.getProduct().getStock()==0)
+            return "fail";
+        return "success";
+    }
+
     //删除订单项
     @RequestMapping("foredeleteOrderItem")
     @ResponseBody
@@ -348,22 +379,42 @@ public class ForeController {
     public ModelAndView createOrder(Order order,HttpSession session){
         //新增oder，并把oi的oid改为该订单-----事务管理
         ModelAndView mav=new ModelAndView();
-        User user=(User)session.getAttribute("user");
-        //根据当前时间加上一个4位随机数生成订单号
-        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyyMMddHHmmssSSS");
-        String orderCode=simpleDateFormat.format(new Date())+RandomUtils.nextInt(10000);
-        //设置order
-        order.setOrderCode(orderCode);
-        order.setCreateDate(new Date());
-        order.setUid(user.getId());
-        order.setStatus(OrderService.waitPay);//待支付
+
         //得到ois
         //请求结算页面时就把ois放session里了
-        List<OrderItem> ois= (List<OrderItem>)session.getAttribute("ois");
-        //修改数据库中order表和orderItem表，并得到订单总金额
-        float total=orderService.add(order,ois);
-        mav.setViewName("redirect:forealipay?oid="+order.getId()+"&total="+total);
-        return mav;
+        boolean flag=false;
+        //重新获取一次ois
+        int[] oiids=(int[])session.getAttribute("oiids");
+        for (int i=0;i<oiids.length;i++) {
+            int id = oiids[i];
+            OrderItem oi= orderItemService.get(id);
+            if(oi.getOid()==-2){
+                flag=true;
+                break;
+            }
+        }
+        if(flag){//存在不行
+            mav.setViewName("redirect:forecart");
+            session.setAttribute("mess","当前商品库存有变化，重新购买商品！");
+            return mav;
+        }
+        else {//全部都可以
+            List<OrderItem> ois = (List<OrderItem>)session.getAttribute("ois");
+            User user=(User)session.getAttribute("user");
+            //根据当前时间加上一个4位随机数生成订单号
+            SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyyMMddHHmmssSSS");
+            String orderCode=simpleDateFormat.format(new Date())+RandomUtils.nextInt(10000);
+            //设置order
+            order.setOrderCode(orderCode);
+            order.setCreateDate(new Date());
+            order.setUid(user.getId());
+            order.setStatus(OrderService.waitPay);//待支付
+
+            //修改数据库中order表和orderItem表，并得到订单总金额
+            float total=orderService.add(order,ois);
+            mav.setViewName("redirect:forealipay?oid="+order.getId()+"&total="+total);
+            return mav;
+        }
     }
     //确认支付页面提交
     @RequestMapping("forepayed")

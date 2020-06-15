@@ -147,4 +147,11 @@ public class Product {
     public void setReviewCount(int reviewCount) {
         this.reviewCount = reviewCount;
     }
+
+    public synchronized boolean descStock(int num){
+        if(stock<num)
+            return false;
+        stock=stock-num;
+        return true;
+    }
 }

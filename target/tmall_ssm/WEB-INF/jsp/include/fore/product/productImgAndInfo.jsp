@@ -146,7 +146,14 @@ $(function(){
 		<div class="productNumber">
 			<span>数量</span>
 			<span>
-				<span class="productNumberSettingSpan"><input type="text" value="1" class="productNumberSetting"></span>
+				<span class="productNumberSettingSpan">
+					<c:if test="${p.stock>0}">
+						<input type="text" value="1" class="productNumberSetting">
+					</c:if>
+					<c:if test="${p.stock<1}">
+						<input type="text" value="0" class="productNumberSetting">
+					</c:if>
+				</span>
 				<span class="arrow">
 					<a class="increaseNumber" href="#nowheretogo">
 					<span class="updown">

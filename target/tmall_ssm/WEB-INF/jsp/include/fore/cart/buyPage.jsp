@@ -4,8 +4,53 @@
 <!-- 参数：ois、sum -->
 <!-- 显示选中的订单项列表 -->
 <!-- 显示总金额 -->
+<script>
+$(function(){
+	// $("button.submitOrderButton").click(function(){
+	// 	$(".orderItemTR").each(function(){
+	// 		var oiid=$(this).attr("oiid");
+	// 		//检查是否过期，若过期刷新，否则继续
+	// 		var page="forecheckNum";
+	// 		$.get(
+	// 				page,
+	// 				{"oiid":oiid},
+	// 				function (result) {
+	// 					if ("fail" == result) {
+	// 						console.log("当前商品库存有变化，即将返回到购物车界面！");
+	// 						alert("当前商品库存有变化，即将返回到购物车界面！");
+	// 						location.href="forecart";
+	// 						return false;
+	// 					}
+	// 				}
+	// 		);
+	// 	});
+	// });
+	function checkStock(){
+		$(".orderItemTR").each(function(){
+			var oiid=$(this).attr("oiid");
+			//检查是否过期，若过期刷新，否则继续
+			var page="forecheckNum";
+			$.get(
+					page,
+					{"oiid":oiid},
+					function (result) {
+						if ("fail" == result) {
+							console.log("当前商品库存有变化，即将返回到购物车界面！");
+							alert("当前商品库存有变化，即将返回到购物车界面！");
+							location.href="forecart";
+							return false;
+						}
+					}
+			);
+		});
+		return true;
+	}
+});
+
+</script>
 	<div class="buyPageDiv">
-	  <form action="forecreateOrder" method="post" class="buyForm">
+	  <form action="forecreateOrder" method="post" class="buyForm" >
+<%--		  onsubmit="return checkStock()"--%>
 		<div class="buyFlow">
 			<span><img class="pull-left" src="img/site/simpleLogo.png"></span>
 			<span><img class="pull-right" src="img/site/buyflow.png"></span>
@@ -58,9 +103,9 @@
 					<td></td>
 				</tr>
 			</thead>
-			<tbody class="productListTableTbody">
+			<tbody class="productListTableTbody" ois>
 				<c:forEach items="${ois}" var="oi" varStatus="st">
-					<tr class="orderItemTR">
+					<tr class="orderItemTR" oiid="${oi.id}">
 						<td class="orderItemFirstTD"><img width="20px"  src="img/productSingle_middle/${oi.product.firstProductImage.id}.jpg" class="orderItemImg"></td>
 						<td class="orderItemProductInfo">
 						<a class="orderItemProductLink" href="foreproduct?pid=${oi.product.id}">

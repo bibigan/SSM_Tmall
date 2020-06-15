@@ -1,12 +1,10 @@
 package com.how2java.tmall.service.impl;
 
 import com.how2java.tmall.mapper.OrderMapper;
-import com.how2java.tmall.pojo.Order;
-import com.how2java.tmall.pojo.OrderExample;
-import com.how2java.tmall.pojo.OrderItem;
-import com.how2java.tmall.pojo.User;
+import com.how2java.tmall.pojo.*;
 import com.how2java.tmall.service.OrderItemService;
 import com.how2java.tmall.service.OrderService;
+import com.how2java.tmall.service.ProductService;
 import com.how2java.tmall.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,6 +21,8 @@ public class OrderServiceImpl implements OrderService {
     UserService userService;
     @Autowired
     OrderItemService orderItemService;
+    @Autowired
+    ProductService productService;
 
     @Override
     public void delete(int id) {
@@ -72,6 +72,11 @@ public class OrderServiceImpl implements OrderService {
             oi.setOid(o.getId());
             orderItemService.update(oi);
             total+=oi.getNumber()*oi.getProduct().getPromotePrice();
+            //减少p库存
+            Product p=oi.getProduct();
+            p.descStock(oi.getNumber());
+            productService.update(p);//数据库触发断判断在该产品下，是否有-2的oi可以改为-1，或者-1的改为-2
+            System.out.println("!!!!!!!!!!!!!!!!减库存!!!!!!!!!!!!!!!");
         }
         return total;
     }

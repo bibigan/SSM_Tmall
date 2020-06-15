@@ -70,7 +70,7 @@ public class OrderItemServiceImpl implements OrderItemService{
     public List<OrderItem> listInCart(int uid) {//查看某用户购物车里的订单项oid=-1;
         OrderItemExample orderItemExample=new OrderItemExample();
         orderItemExample.createCriteria().andUidEqualTo(uid)
-                                         .andOidEqualTo(-1);
+                                        .andOidLessThan(0);
         orderItemExample.setOrderByClause("id desc");
         List<OrderItem> orderItems= orderItemMapper.selectByExample(orderItemExample);
         setProduct(orderItems);
@@ -123,7 +123,7 @@ public class OrderItemServiceImpl implements OrderItemService{
         OrderItemExample example=new OrderItemExample();
         example.createCriteria().andPidEqualTo(pid)
                                 .andUidEqualTo(uid)
-                                .andOidEqualTo(-1);
+                                .andOidLessThan(0);
         List<OrderItem> ois=orderItemMapper.selectByExample(example);
         //setProduct(ois.get(0));
         if(ois.isEmpty())
